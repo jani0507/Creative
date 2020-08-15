@@ -48,9 +48,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: 0
   length: 14
-  beginY1: 1
-  beginY2: 3
-  beginY3: 1
+  beginY1: 0
+  beginY2: 0
+  beginY3: 0
   endY1: 1
   endY2: 0
   endY3: 1

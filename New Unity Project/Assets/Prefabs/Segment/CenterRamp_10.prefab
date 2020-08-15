@@ -49,13 +49,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: 0
-  length: 16
+  length: 25
   beginY1: 0
   beginY2: 0
   beginY3: 0
   endY1: 1
   endY2: 0
-  endY3: 3
+  endY3: 1
 --- !u!1001 &2567054438672724641
 PrefabInstance:
   m_ObjectHideFlags: 0

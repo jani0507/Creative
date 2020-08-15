@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class FollowPlane : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Transform playerTramsform;
+
+    private void Start()
     {
-        
+        playerTramsform = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        transform.position = Vector3.forward * playerTramsform.position.z;
     }
 }
