@@ -31,6 +31,7 @@ public class LevelManager : MonoBehaviour
     //List if Segments
     public List<Segment> availableSegments = new List<Segment>();
     public List<Segment> availableTransition = new List<Segment>();
+    [HideInInspector]
     public List<Segment> segments = new List<Segment>();
 
     //Gameplay
