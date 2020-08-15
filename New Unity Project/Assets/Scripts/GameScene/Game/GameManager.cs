@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance { set; get; }
 
+    public bool isDead { set; get; }
     private bool isGameStarted = false;
     private PlayerMotor motor;
 
@@ -36,7 +37,7 @@ public class GameManager : MonoBehaviour
             motor.StartRunning();
         }
 
-        if (isGameStarted)
+        if (isGameStarted && !isDead)
         {
             //Die Punktzahl erhöhen
             

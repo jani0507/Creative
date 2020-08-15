@@ -2,16 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEngine.iOS;
 
 public class LevelManager : MonoBehaviour
-{
-    public static LevelManager Instance { set; get; }
+{ 
+    public bool SHOW_COLLIDER = true;
 
-    private const bool SHOW_COLLIDER = true;
+    public static LevelManager Instance { set; get; }
 
     //Level Spawning
     private const float DISTANCE_BEFORE_SPAWN = 100.0f;
     private const int INITIAL_SEGMENTS = 10;
+    private const int INITIAL_TRANSITION_SEGMENTS = 2;
     private const int MAX_SEGMENTS_ON_SCREEN = 15;
     private Transform cameraContainer;
     private int amountOfActiveSegments;
@@ -47,8 +49,23 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         for (int i = 0; i < INITIAL_SEGMENTS; i++)
+            if (i < INITIAL_TRANSITION_SEGMENTS)
+                SpawnTransition();
+            else        
+                GenerateSegment();
+        
+    }
+
+    private void Update()
+    {
+        if (currentSpawnZ - cameraContainer.position.z < DISTANCE_BEFORE_SPAWN)
             GenerateSegment();
         
+        if(amountOfActiveSegments >= MAX_SEGMENTS_ON_SCREEN)
+        {
+            segments[amountOfActiveSegments - 1].DeSpawn();
+            amountOfActiveSegments--;
+        }
     }
 
     private void GenerateSegment()
