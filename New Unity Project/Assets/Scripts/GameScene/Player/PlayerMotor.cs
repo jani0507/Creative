@@ -17,7 +17,7 @@ public class PlayerMotor : MonoBehaviour
 
     //Movement variablen
     private CharacterController cc;   
-    private float jumpForce = 4.0f; //Sprungkraft   
+    public float jumpForce = 4.0f; //Sprungkraft   
     private float gravity = 12.0f; //Gravitation    
     private float verticalVelocity; //vertikale Geschwindigkeit       
     //Die Linien wo sich der Spieler befindet
