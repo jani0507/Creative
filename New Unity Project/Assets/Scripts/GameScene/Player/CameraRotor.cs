@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraRotor : MonoBehaviour
 {
     public Transform lookAt; //Der Spieler oder Object, das wir beobachten
-    public Vector3 offset = new Vector3(0, 5.0f, -10.0f);
+    public Vector3 offset = new Vector3(0, 92, -8.0f);
 
     private void Start()
     {
