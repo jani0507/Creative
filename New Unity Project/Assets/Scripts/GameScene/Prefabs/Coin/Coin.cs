@@ -1,14 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
     private Animator anim;
 
-    private void Start()
+    private void Awake()
     {
         anim = GetComponent<Animator>();
+    }
+
+    private void OnEnable()
+    {
+        anim.SetTrigger("Spawn");
     }
 
     private void OnTriggerEnter(Collider other)

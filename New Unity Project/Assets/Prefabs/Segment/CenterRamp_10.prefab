@@ -33,6 +33,7 @@ Transform:
   - {fileID: 6040386760336916065}
   - {fileID: 7353065109583254546}
   - {fileID: 8818452663703576493}
+  - {fileID: 6005718335462976418}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -49,10 +50,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: 0
-  length: 25
-  beginY1: 1
+  length: 31
+  beginY1: 0
   beginY2: 0
-  beginY3: 1
+  beginY3: 0
   endY1: 1
   endY2: 0
   endY3: 1
@@ -117,6 +118,80 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4412696981254806737, guid: fd16533ae204229459fbd23d93ba179e, type: 3}
   m_PrefabInstance: {fileID: 2567054438672724641}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6282003124216742859
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7993554294292978363}
+    m_Modifications:
+    - target: {fileID: 321639653264812137, guid: bb31466a1cd5ac94f9b3f612536b2d72, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 321639653264812137, guid: bb31466a1cd5ac94f9b3f612536b2d72, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 321639653264812137, guid: bb31466a1cd5ac94f9b3f612536b2d72, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 321639653264812137, guid: bb31466a1cd5ac94f9b3f612536b2d72, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 321639653264812137, guid: bb31466a1cd5ac94f9b3f612536b2d72, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 321639653264812137, guid: bb31466a1cd5ac94f9b3f612536b2d72, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 321639653264812137, guid: bb31466a1cd5ac94f9b3f612536b2d72, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 321639653264812137, guid: bb31466a1cd5ac94f9b3f612536b2d72, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 321639653264812137, guid: bb31466a1cd5ac94f9b3f612536b2d72, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 321639653264812137, guid: bb31466a1cd5ac94f9b3f612536b2d72, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 321639653264812137, guid: bb31466a1cd5ac94f9b3f612536b2d72, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 321639653264812142, guid: bb31466a1cd5ac94f9b3f612536b2d72, type: 3}
+      propertyPath: maxCoin
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 321639653264812142, guid: bb31466a1cd5ac94f9b3f612536b2d72, type: 3}
+      propertyPath: chanceToSpawn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 321639653264812142, guid: bb31466a1cd5ac94f9b3f612536b2d72, type: 3}
+      propertyPath: forceSpawnAll
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 321639653264812143, guid: bb31466a1cd5ac94f9b3f612536b2d72, type: 3}
+      propertyPath: m_Name
+      value: CoinLine_1 (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bb31466a1cd5ac94f9b3f612536b2d72, type: 3}
+--- !u!4 &6005718335462976418 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 321639653264812137, guid: bb31466a1cd5ac94f9b3f612536b2d72, type: 3}
+  m_PrefabInstance: {fileID: 6282003124216742859}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7993554292494686015
 PrefabInstance:

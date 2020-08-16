@@ -1,7 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
+
 
 public class CoinSpawner : MonoBehaviour
 {
@@ -15,31 +14,31 @@ public class CoinSpawner : MonoBehaviour
     {
         coins = new GameObject[transform.childCount];
         for (int i = 0; i < transform.childCount; i++)
-            coins[i] = transform.GetChild(i).gameObject;      
+            coins[i] = transform.GetChild(i).gameObject;
+
+        OnDisable();
     }
 
     private void OnEnable()
     {
-        if (UnityEngine.Random.Range(0.0f, 1.0f) < chanceToSpawn)
+        if (Random.Range(0.0f, 1.0f) > chanceToSpawn)
             return;
 
-        if (forceSpawnAll)        
-            foreach (GameObject go in coins)
-                go.SetActive(true);
+        if (forceSpawnAll)
+            for (int i = 0; i < maxCoin; i++) ;
+
         else
         {
-            int r = UnityEngine.Random.Range(0, maxCoin);
+            int r = Random.Range(0, maxCoin);
             for (int i = 0; i < r; i++)
-            {
                 coins[i].SetActive(true);
-            }
         }
         
     }
 
     private void OnDisable()
     {
-        foreach(GameObject go in coins)
-            go.SetActive(false);
+        
+        
     }
 }

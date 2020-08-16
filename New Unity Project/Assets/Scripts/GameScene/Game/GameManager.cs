@@ -18,6 +18,10 @@ public class GameManager : MonoBehaviour
     private float score, coinScore, modifierScore;
     private int lastScore;
 
+    //Death menu
+    public Animator deathMenuAnim;
+    public Text deathscoreText, deathcoinText;
+
     private void Awake()
     {
         Instance = this;
@@ -28,6 +32,8 @@ public class GameManager : MonoBehaviour
         coinText.text = coinScore.ToString("0");
         scoreText.text = scoreText.text = score.ToString("0");
 
+
+
     }
     private void Update()
     {
@@ -35,6 +41,8 @@ public class GameManager : MonoBehaviour
         {
             isGameStarted = true;
             motor.StartRunning();
+            FindObjectOfType<SiteBuildingsSpawner>().isScrolling = true;
+
         }
 
         if (isGameStarted && !isDead)
@@ -64,5 +72,32 @@ public class GameManager : MonoBehaviour
     {
         modifierScore = 1.0f + modifierAmount;
         modifierText.text = "x" + modifierScore.ToString("0.0");
+    }
+    public void PlayBtn()
+    {
+
+    }
+
+    public void OnPlayButton()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Game");
+    }
+    public void OnHomeButton()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+    }
+
+    public void OnDeath()
+    {
+        isDead = true;
+        if(PlayerPrefs.GetFloat("Highscore") > score)
+            PlayerPrefs.SetFloat("Highscore", score);
+
+        FindObjectOfType<SiteBuildingsSpawner>().isScrolling = false;
+
+        deathscoreText.text = score.ToString("0");
+        deathcoinText.text = coinScore.ToString("0");
+        deathMenuAnim.SetTrigger("Death");
+       
     }
 }
