@@ -7,10 +7,14 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     public Text highscoreText;
+    public GameObject shopUi;
+    public GameObject mainUi;
+    public Animator anim;
 
     private void Start()
     {
         highscoreText.text = "" + ((int)PlayerPrefs.GetFloat("Highscore")).ToString();
+
     }
 
     public void PlayGame()
@@ -27,6 +31,6 @@ public class MainMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
-        }
+        }             
     }
 }
