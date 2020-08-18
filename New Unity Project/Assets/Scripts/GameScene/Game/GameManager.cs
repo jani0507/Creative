@@ -70,8 +70,8 @@ public class GameManager : MonoBehaviour
    
     public void UpdateModifier(float modifierAmount)
     {
-        modifierScore = 1.0f + modifierAmount;
-        modifierText.text = "x" + modifierScore.ToString("0.0");
+        modifierScore = 0.4f + modifierAmount;
+        modifierText.text = "x" + modifierScore.ToString("0");
     }
     public void PlayBtn()
     {

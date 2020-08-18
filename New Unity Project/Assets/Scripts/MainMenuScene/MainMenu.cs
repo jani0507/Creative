@@ -13,8 +13,8 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
-        highscoreText.text = "" + ((int)PlayerPrefs.GetFloat("Highscore")).ToString();
 
+        highscoreText.text = " " + ((int)PlayerPrefs.GetFloat("Highscore")).ToString();
     }
 
     public void PlayGame()
@@ -28,9 +28,12 @@ public class MainMenu : MonoBehaviour
 
     private void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
-        }             
+        }       
+        
+
     }
 }
