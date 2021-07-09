@@ -52,6 +52,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -110,6 +111,7 @@ GameObject:
   - component: {fileID: 1881241208720474916}
   - component: {fileID: 474465025}
   - component: {fileID: 474465026}
+  - component: {fileID: 251886003748655439}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -125,7 +127,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8113741136472907438}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3952390726484296773}
@@ -151,6 +153,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -211,6 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a51bdbe1b594d24b97fd7ddb4ab4a34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpForce: 4
 --- !u!95 &474465025
 Animator:
   serializedVersion: 3
@@ -242,3 +246,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea41dcf5fc9eec949b91273e74e0fffb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &251886003748655439
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8113741136472907438}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}

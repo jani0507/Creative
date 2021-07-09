@@ -84,7 +84,7 @@ public class PlayerMotor : MonoBehaviour
             }
             else if (MobileInputs.Instance.SwipeDown)
             {
-                //Slide
+                //Sliden
                 StartSliding();
                 Invoke("StopSliding", 1.0f);
             }

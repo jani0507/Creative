@@ -20,7 +20,7 @@ public class LevelManager : MonoBehaviour
     private int continiousSegments;
     private int currentSpawnZ;
     private int currentLevel;
-    private int y1, y2, y3;
+    private int y1, y2, y3; 
 
     //List of pieces
     public List<Piece> ramps = new List<Piece>();
@@ -72,8 +72,9 @@ public class LevelManager : MonoBehaviour
     {
         SpawnSegment();
 
-        if(Random.Range(0f,1f) <(continiousSegments * 0.25f))
+        if(Random.Range(0f,1f) < (continiousSegments * 0.25f))
         {
+            //spawn transition segmetns
             continiousSegments = 0;
             SpawnTransition();
         }
@@ -88,7 +89,7 @@ public class LevelManager : MonoBehaviour
     {
         List<Segment> possibleSeg = availableSegments.FindAll(x => x.beginY1 == y1 || x.beginY2 == y2 || x.beginY3 == y3);
         int id = Random.Range(0, possibleSeg.Count);
-
+     
         Segment s = GetSegment(id, false);
 
         y1 = s.endY1;
