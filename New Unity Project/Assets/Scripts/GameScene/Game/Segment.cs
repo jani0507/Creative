@@ -22,7 +22,6 @@ public class Segment : MonoBehaviour
                     mr.enabled = LevelManager.Instance.SHOW_COLLIDER;
     }
 
-
     public void Spawn()
     {
         gameObject.SetActive(true);
